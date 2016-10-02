@@ -3,7 +3,7 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-public class Solution {
+public class Arithmetic {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -13,11 +13,14 @@ public class Solution {
         scan.close();
       
         // Write your calculation code here.
-      
+        //double numberToRoundHere = mealCost*(1 + ((tipPercent + taxPercent)/100));
+        double numberToRoundHere = mealCost + tipPercent*mealCost/100 + taxPercent*mealCost/100;
+        
         // cast the result of the rounding operation to an int and save it as totalCost 
-        int totalCost = (int) Math.round(/*numberToRoundHere*/);
+        int totalCost = (int) Math.round(numberToRoundHere);
       
         // Print your result
+        System.out.println("The total meal cost is " + totalCost + " dollars.");
     }
 }
 
